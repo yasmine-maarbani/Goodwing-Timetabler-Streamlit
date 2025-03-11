@@ -3,6 +3,12 @@ import yaml
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import datetime as dt
+from typing import List
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+from GoodwingTimetabler.csp.objects import Course
 
 def append_courses_to_yaml_file(courses: List[Course], file_path, groupName: str = 'NoName'):
     """

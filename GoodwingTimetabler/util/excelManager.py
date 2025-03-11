@@ -9,7 +9,12 @@ from openpyxl.worksheet.filters import FilterColumn, Filters
 import datetime as dt
 from typing import List, Dict
 from collections import defaultdict
-from csp import University
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+
+from GoodwingTimetabler.csp import University
 
 def createCSV(gen_dir: str = './GoodwingTimetabler/UniversityInstance/'):
     sheets = ['University', 'Timeslots', 'Promotions', 'Subjects', 'Teachers', 'Rooms']
